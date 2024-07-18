@@ -1,0 +1,65 @@
+<div class="container">
+  <h1 class="text-center">{{ user.name }}</h1>
+  <div class="card my-2">
+    <div class="card-body">
+      <!--name-->
+      <div class="mb-2 p-4">
+        <i class="fa-solid fa-user fa-lg d-block"></i>
+        <span class="fw-bold">{{ user.name }}</span>
+      </div>
+
+      <!--email-->
+      <div class="mb-2 p-4">
+        <i class="fa-solid fa-envelope fa-lg d-block"></i>
+        <span class="fw-bold">{{ user.email }}</span>
+      </div>
+
+      <!--address-->
+      <div class="mb-2 p-4">
+        <i class="fa-solid fa-address-book fa-lg d-block"></i>
+        <span class="fw-bold">{{ user.address.city }}</span>
+        <div class="my-2 p-2">
+          <span class="fw-bold mx-3 d-block"
+            >street: {{ user.address.street }}</span
+          >
+          <span class="fw-bold mx-3 d-block"
+            >suite: {{ user.address.suite }}</span
+          >
+          <span class="fw-bold mx-3 d-block"
+            >zipcode: {{ user.address.zipcode }}</span
+          >
+          <span class="fw-bold mx-3 d-block"
+            >latitude: {{ user.address.geo.lat }}</span
+          >
+          <span class="fw-bold mx-3 d-block"
+            >longitude:{{ user.address.geo.lng }}</span
+          >
+        </div>
+      </div>
+
+      <!--phone-->
+      <div class="mb-2 p-4">
+        <i class="fa-solid fa-phone fa-lg d-block"></i>
+        <span class="fw-bold">{{ user.phone }}</span>
+      </div>
+
+      <!--website-->
+      <div class="mb-2 p-4">
+        <i class="fa-solid fa-globe fa-lg d-block"></i>
+        <span class="fw-bold">{{ user.website }}</span>
+      </div>
+
+      <!--company-->
+      <div class="mb-2 p-4">
+        <i class="fa-solid fa-building fa-lg d-block"></i>
+        <span class="fw-bold">{{ user.company.name }}</span>
+        <div class="my-2 p-2">
+          <span class="fw-bold mx-3 d-block"
+            >catchPhrase: {{ user.company.catchPhrase }}</span
+          >
+          <span class="fw-bold mx-3 d-block">bs: {{ user.company.bs }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

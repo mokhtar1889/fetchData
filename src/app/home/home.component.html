@@ -1,0 +1,14 @@
+<div class="container my-4">
+  <!--search input-->
+  <input
+    type="text"
+    class="w-50 mx-auto d-block form-control"
+    [(ngModel)]="searchKey"
+    placeholder="search user by name"
+  />
+  <div class="card my-2" *ngFor="let user of users | seachUser : searchKey">
+    <a [routerLink]="['userDetails', user.id]" class="text-decoration-none">
+      <div class="card-body">{{ user.name }}</div>
+    </a>
+  </div>
+</div>
